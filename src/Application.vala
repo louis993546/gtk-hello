@@ -1,3 +1,4 @@
+// https://docs.elementary.io/develop/writing-apps/hello-world
 public class MyApp : Gtk.Application {
     public MyApp () {
         Object (
