@@ -13,8 +13,8 @@ public class MyApp : Gtk.Application {
             title = "Hello World"
         };
 
-        var label = new Gtk.Label ("Hello Again World!");
-        
+        var label = new Gtk.Label (_("Hello Again World!"));
+
         main_window.add (label);
         main_window.show_all ();
     }
