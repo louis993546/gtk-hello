@@ -1,4 +1,3 @@
-// https://docs.elementary.io/develop/writing-apps/hello-world
 public class MyApp : Gtk.Application {
     public MyApp () {
         Object (
@@ -8,23 +7,15 @@ public class MyApp : Gtk.Application {
     }
 
     protected override void activate () {
-        var button_hello = new Gtk.Button.with_label ("Click me!") {
-            margin = 12
-        };
-
-        button_hello.clicked.connect(() => {
-            button_hello.label = "Hello World!";
-            button_hello.sensitive = false;
-        });
-
         var main_window = new Gtk.ApplicationWindow (this) {
-            default_height = 300,
             default_width = 300,
+            default_height = 300,
             title = "Hello World"
         };
 
-        main_window.add (button_hello);
-
+        var label = new Gtk.Label ("Hello Again World!");
+        
+        main_window.add (label);
         main_window.show_all ();
     }
 
